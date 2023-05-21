@@ -8,7 +8,7 @@ const newQuoteBtn = document.getElementById("new-quote");
 let apiQuotes = [];
 
 // Show New Quote
-function newQuote() {
+const newQuote = () => {
     // Pick a random quote from apiQuotes array
     const quote = apiQuotes[Math.floor(Math.random()* apiQuotes.length)];
     // Check if Author filed is blank and replace it with unknown
@@ -27,7 +27,7 @@ function newQuote() {
 }
 
 // Get Quotes From API
-async function getQuotes(){
+const getQuotes = async () => {
     const apiUrl = 'https://type.fit/api/quotes';
     try {
         const response = await fetch(apiUrl);
@@ -39,7 +39,7 @@ async function getQuotes(){
 }
 
 // Tweet Quote
-function tweetQuote() {
+const tweetQuote = () => {
     const twitterUrl = `https://twitter.com/intent/tweet?text=${quote.textContent} - ${authorText.textContent}`;
     window.open(twitterUrl, '_blank');
 }
