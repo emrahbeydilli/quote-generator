@@ -50,4 +50,4 @@ twitterBtn.addEventListener("click",tweetQuote);
 
 
 // On Load
-getQuotes();
+window.addEventListener("load",getQuotes);
